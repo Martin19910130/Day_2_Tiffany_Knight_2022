@@ -57,3 +57,10 @@ table(economics_long$variable)
 table(esoph$alcgp, esoph$tobgp)
 ## this way R calculates the sum of unique combinations between every column, again 
 ## use help to understand the data set
+
+## if I tell R to store it as data frame this happens: 
+table(esoph$alcgp, esoph$tobgp) %>% as.data.frame()
+## imagine column Var1 and Var2 telling you the stages of two different years and
+## how many repetitions you have in this unique combinations 
+## e.g adult 2005 and adult 2006 are 30 while Adults 2005 and dead 2006 are 10
+## unique combinations
